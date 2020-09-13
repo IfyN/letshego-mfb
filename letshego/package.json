@@ -1,0 +1,30 @@
+{
+  "name": "letshego",
+  "version": "1.0.0",
+  "description": "This project is for Letshego microfinace bank",
+  "main": "index.js",
+  "repository": "git@gitlab.com:webcoupers_/letshego.git",
+  "author": "Webcoupers Team",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "dev": "export DEBUG=dev && nodemon --exec babel-node index.js",
+    "clean": "rm -rf dist && mkdir dist",
+    "build": "yarn clean && babel index.js -d dist && cp -r public dist/public"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/register": "^7.9.0",
+    "nodemon": "^1.18.9"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "chalk": "^3.0.0",
+    "dotenv": "^8.2.0",
+    "morgan": "^1.10.0"
+  }
+}
